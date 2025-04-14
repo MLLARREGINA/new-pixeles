@@ -3,12 +3,27 @@
     header {
       position: relative;
       height: 100vh;
-      background: black;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       overflow: hidden;
+    }
+    
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .section {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6); /* Fondo negro translúcido */
+      color: white;
     }
     header video {
       position: absolute;
@@ -81,4 +96,4 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-    
+   
