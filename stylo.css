@@ -1,15 +1,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { height: 100%; color: rgb(255, 252, 255); }
     header {
-      position: relative;
-      z-index: 1;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        text-align: center;
+      }
+    
     #bg-video {
       position: fixed;
       top: 0;
@@ -32,7 +29,6 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
-      filter: brightness(0.4);
     }
     h1 {
       font-size: 3rem;
@@ -40,28 +36,25 @@
     }
     
     .cta-btn {
-      background-color: #25D366;
+      z-index: 3;
+      position: relative;
+      background-color: #00e676;
       color: white;
+      font-size: 1.3rem;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
       text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 18px;
+      box-shadow: 0 0 15px #00e676;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-weight: bold;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      animation: pulse 1.8s infinite;
-      width: auto;
-      display: inline-flex;
-      align-self: center;
     }
     
     .cta-btn:hover {
-      background-color: #1ebe5b;
       transform: scale(1.1);
+      box-shadow: 0 0 25px #00ff88;
     }
     
     @keyframes pulse {
@@ -129,56 +122,41 @@
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
       }
-    
-      .contenedor-bienvenida {
-        margin-top: 60px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        background-color: rgba(0, 0, 0, 0.75);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 15px #25D366;
-        text-align: center;
-        max-width: 600px;
-        width: 80%;
-        color: white;
-        gap: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .mensaje-boton {
-        font-size: medium;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      .contenedor-bienvenida h1 {
-        font-size: 1.6rem;
-      }
-      
-      .contenedor-bienvenida h2 {
-        font-size: 1.2rem;
-      }
-      
-      .contenedor-bienvenida.lel {
-      font-size: small;
-      line-height: 1.0;
-      }
-      
-      .contenedor-bienvenida h1 {
-        font-size: 1.6rem;
-      }
-      
-      .contenedor-bienvenida h2 {
-        font-size: 1.2rem;
-      }
-      
-     .lol{
-      margin-bottom: 0.5rem;
-      font-size: medium;
-     }
      
+/* Wrapper del video pequeño + botón */
+.video-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado en pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Video pequeño encima del fondo */
+.video-caja {
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00ff88;
+  z-index: 11;
+  position: relative;
+}
+
+/* Botón debajo del video */
+.btn-wsp {
+  margin-top: -25px;
+  background-color: #00e676;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 12px #00e676;
+  z-index: 12;
+  position: relative;
+}
