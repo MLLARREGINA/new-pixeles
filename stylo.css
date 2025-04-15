@@ -138,21 +138,22 @@
 .video-caja {
   width: 100%;
   height: auto;
-  max-width: 500px; 
+  max-width: 500px;
   border-radius: 20px;
   box-shadow: 0 0 15px #00ff88;
   z-index: 11;
   position: relative;
   display: block;
+  margin: 2rem auto;
 }
 
-
+/* MOBILE FIRST — fuerza el video a ocupar más pantalla */
 @media screen and (max-width: 768px) {
   .video-caja {
-    max-width: 90vw; 
-    margin-top: 1rem;
+    max-width: 95vw;
+    width: 95vw;
+    margin: 1rem auto;
     border-radius: 15px;
-    box-shadow: 0 0 10px #00ff88;
   }
 }
 
