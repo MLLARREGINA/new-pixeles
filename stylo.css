@@ -151,6 +151,7 @@
         align-items: center;
       }
       .mensaje-boton {
+        font-size: medium;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -163,11 +164,12 @@
         font-size: 1.2rem;
       }
       
-      .lel {
-        font-size: 1rem;
-        line-height: 1.4;
-        font-weight: normal;
-      }.contenedor-bienvenida h1 {
+      .contenedor-bienvenida.lel {
+      font-size: small;
+      line-height: 1.0;
+      }
+      
+      .contenedor-bienvenida h1 {
         font-size: 1.6rem;
       }
       
@@ -176,6 +178,7 @@
       }
       
      .lol{
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
+      font-size: medium;
      }
      
