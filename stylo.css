@@ -135,28 +135,24 @@
   z-index: 10;
 }
 
-/* Video pequeño encima del fondo */
 .video-caja {
-  margin-top: 5rem;
   width: 100%;
-  max-width: 500px;
+  height: auto;
+  max-width: 500px; 
   border-radius: 20px;
   box-shadow: 0 0 15px #00ff88;
   z-index: 11;
   position: relative;
+  display: block;
 }
+
+
 @media screen and (max-width: 768px) {
   .video-caja {
     max-width: 90vw; 
-    margin-top: 2rem; 
-    border-radius: 15px;
-    box-shadow: 0 0 10px #00ff88; 
-  }
-}
-@media screen and (max-width: 480px) {
-  .video-caja {
-    max-width: 95vw;
     margin-top: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #00ff88;
   }
 }
 
