@@ -56,7 +56,7 @@
         <source src="./videos/div bienvenida.mp4" type="video/mp4">
       </video>
     
-      <a href="https://wa.link/tulugarpremium" class="btn-wsp" target="_blank">
+      <a href="https://wa.link/tulugarpremium" class="btn-wsp" target="_blank" id="whatsapp-btn">
         <i class="fab fa-whatsapp"></i> ¡QUIERO MI BONO!
       </a>
       <p class="open"> MINIMO DE CARGA $1.000 </p>
@@ -77,8 +77,12 @@
   </section>
 
   <footer>
-    <a href="https:///Wa.link/tulugarpremium" class="btn-wsp" onclick="fbq('trackCustom', 'whatsapp_click')">CARGA AHORA Y GANA</a>
+    <a href="https:///Wa.link/tulugarpremium" class="btn-wsp" onclick="fbq('trackCustom', 'whatsapp_click')" id="whatsapp-btn">CARGA AHORA Y GANA</a>
   </footer>
-
+  <script>
+    document.getElementById('whatsapp-btn').addEventListener('click', function() {
+      fbq('trackCustom', 'WhatsAppClick');
+    });
+  </script>
 </body>
 </html>
